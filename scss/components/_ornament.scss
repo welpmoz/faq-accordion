@@ -1,0 +1,14 @@
+@use '../utils/' as u;
+
+.ornament {
+    height: 23.2rem;
+    background-image: url('./assets/images/background-pattern-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: height 0.3s ease-out;
+
+    @include u.breakpoint(large) {
+        height: 32rem;
+        background-image: url('./assets/images/background-pattern-desktop.svg');
+    }
+}

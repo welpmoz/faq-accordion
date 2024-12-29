@@ -1,0 +1,197 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0rem;
+  padding: 0rem;
+}
+
+img {
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--light-pink);
+}
+
+:root {
+  --dark-purple: #301534;
+  --pale-purple: #8B6990;
+  --white: #FFFFFF;
+  --light-pink: #F8EEFF;
+  --pink: #AD28EB;
+}
+
+.color-dark-purple {
+  color: var(--dark-purple);
+}
+
+.color-pale-purple {
+  color: var(--pale-purple);
+}
+
+.grid {
+  width: 100%;
+  padding: 0rem 2.4rem;
+  display: grid;
+  grid-template-columns: repeat(4, 7.3rem);
+  gap: 1.2rem;
+  justify-content: center;
+}
+@media (width >= 46.875rem) {
+  .grid {
+    grid-template-columns: repeat(6, 6.5rem);
+  }
+}
+@media (width >= 75rem) {
+  .grid {
+    grid-template-columns: repeat(8, 6.5rem);
+  }
+}
+.grid__item {
+  grid-column: 1/5;
+  margin: 14.25rem 0rem;
+}
+@media (width >= 46.875rem) {
+  .grid__item {
+    grid-column: 1/7;
+    margin: 15.5rem 0rem;
+  }
+}
+@media (width >= 75rem) {
+  .grid__item {
+    grid-column: 1/9;
+    margin: 16.75rem 0rem;
+  }
+}
+.grid--main {
+  position: absolute;
+  top: 0rem;
+}
+
+@font-face {
+  font-family: "Work Sans";
+  src: url("./assets/fonts/WorkSans-VariableFont_wght.ttf");
+}
+:root {
+  font-size: 62.5%;
+  font-family: "Work Sans", serif;
+  font-optical-sizing: auto;
+}
+
+.text-heading {
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0%;
+  transition: font-size 0.3s ease-out;
+}
+@media (width >= 46.875rem) {
+  .text-heading {
+    font-size: 1.8rem;
+  }
+}
+
+.text-body {
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 0%;
+  line-height: 150%;
+  transition: font-size 0.3s ease-out;
+}
+@media (width >= 46.875rem) {
+  .text-body {
+    font-size: 1.6rem;
+  }
+}
+
+.text-display {
+  font-size: 3.2rem;
+  font-weight: 700;
+  letter-spacing: 0%;
+  transition: font-size 0.3s ease-out;
+}
+@media (width >= 46.875rem) {
+  .text-display {
+    font-size: 5.6rem;
+  }
+}
+
+.accordion {
+  background-color: var(--white);
+  padding: 2.4rem;
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.accordion__icon {
+  scale: 0.65;
+  transition: scale 0.3s ease-out;
+}
+@media (width >= 46.875rem) {
+  .accordion__icon {
+    scale: 0.925;
+  }
+}
+.accordion__heading {
+  display: flex;
+  flex-direction: row;
+  column-gap: 2.4rem;
+  row-gap: 0.6rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.accordion__items {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.accordion__item {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.accordion__title {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 2.4rem;
+  align-items: center;
+  transition: color 0.3s ease-out, cursor 0.3s ease-out;
+}
+.accordion__title::after {
+  content: "";
+  width: 2.438rem;
+  height: 2.438rem;
+  background-image: url("./assets/images/icon-plus.svg");
+  background-size: cover;
+  transition: background-image 0.3s ease-out;
+}
+.accordion__title:hover {
+  color: var(--pink);
+  cursor: pointer;
+}
+.accordion__title:focus {
+  outline-color: var(--pink);
+}
+
+.accordion__item[open] > .accordion__title::after {
+  background-image: url("./assets/images/icon-minus.svg");
+}
+
+.ornament {
+  height: 23.2rem;
+  background-image: url("./assets/images/background-pattern-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: height 0.3s ease-out;
+}
+@media (width >= 75rem) {
+  .ornament {
+    height: 32rem;
+    background-image: url("./assets/images/background-pattern-desktop.svg");
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
